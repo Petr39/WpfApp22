@@ -1,0 +1,219 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{5CE5F27E-392B-4742-BF63-35C01D2609DB}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>WpfApp22</RootNamespace>
+    <AssemblyName>WpfApp22</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{60dc8134-eba5-43b8-bcc9-bb4bc16c2548};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <WarningLevel>4</WarningLevel>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xaml">
+      <RequiredTargetFramework>4.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="WindowsBase" />
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+  </ItemGroup>
+  <ItemGroup>
+    <ApplicationDefinition Include="App.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </ApplicationDefinition>
+    <Compile Include="BonusOneInfo.xaml.cs">
+      <DependentUpon>BonusOneInfo.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ChangeName.xaml.cs">
+      <DependentUpon>ChangeName.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Settings.cs" />
+    <Page Include="BonusOneInfo.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="ChangeName.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="MainWindow.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Compile Include="App.xaml.cs">
+      <DependentUpon>App.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Computer.cs" />
+    <Compile Include="Human.cs" />
+    <Compile Include="MainWindow.xaml.cs">
+      <DependentUpon>MainWindow.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Properties\AssemblyInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Exit.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Human.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Computer.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Computer2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Attack.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Bullets.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Energy.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\DobijeniItem.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Zamirititem.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\KritickyZasahitem.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Zivotitem.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Penizeitem.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Santa.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="ImagesBonus\BonusStrenght.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="ImagesBonus\HerathLife.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="ImagesBonus\BonusKalhotky.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="ImagesBonus\Ropucha.jpeg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Soldier.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\SoldierHuman.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="3.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="4 - kopie.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Pozadi2.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Pozadi1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Pozadi3.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Pozadi4.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Pozadi5.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="ImagesComputer\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Pozadi6.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Treasure.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Tank.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Ufo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="ImagesBonus\Ponozky.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="ImagesBonus\BonusDveře.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Treasure2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="ImagesBonus\Kytka.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

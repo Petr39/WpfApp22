@@ -1,0 +1,274 @@
+﻿<Window x:Name="Main_window" x:Class="WpfApp22.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfApp22"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800"
+        WindowStartupLocation="CenterScreen"
+        Background="Transparent"
+        AllowsTransparency="True"
+        WindowStyle="None"
+        
+        
+        
+        >
+    <Border BorderThickness="2" BorderBrush="black" Margin="0,0,0,-0.4" >
+        <Border.Background>
+            <ImageBrush ImageSource="Images/Pozadi5.jpg"/>
+        </Border.Background>
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition Width="40"/>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="40"/>
+                <RowDefinition Height="90"/>
+                <RowDefinition Height="30"/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+            </Grid.RowDefinitions>
+            <Border  CornerRadius="5" BorderThickness="2" BorderBrush="Black" 
+                        Grid.Row="4" Grid.Column="0"  Height="68" Width="68" Margin="16,13,66,12.2">
+                <Border.Background>
+                    <SolidColorBrush Color="#FF388B83" Opacity="0.4"/>
+                </Border.Background>
+                <Image x:Name="Image2_img" MouseLeftButtonDown="Image2_img_MouseLeftButtonDown"/>
+            </Border>
+            <Border  CornerRadius="5" BorderThickness="2" BorderBrush="Black" 
+                        Grid.Row="3" Grid.Column="1"  Height="68" Width="68" Margin="62,13,19.2,13">
+                <Border.Background>
+                    <SolidColorBrush Color="#FF388B83" Opacity="0.4"/>
+                </Border.Background>
+                <Image x:Name="Image7_img"/>
+            </Border>
+            <Border  CornerRadius="5" BorderThickness="2" BorderBrush="Black" 
+                        Grid.Row="3" Grid.Column="2"  Height="68" Width="68" HorizontalAlignment="Left" Margin="7.8,14,0,14">
+                <Border.Background>
+                    <SolidColorBrush Color="#FF388B83" Opacity="0.4"/>
+                </Border.Background>
+                <Image x:Name="Image8_img"/>
+            </Border>
+            <Border  CornerRadius="5" BorderThickness="2" BorderBrush="Black" 
+                        Grid.Row="4" Grid.Column="2"  Height="68" Width="68" HorizontalAlignment="Left" Margin="7.8,14,0,13.2">
+                <Border.Background>
+                    <SolidColorBrush Color="#FF388B83" Opacity="0.4"/>
+                </Border.Background>
+                <Image x:Name="Image9_img"/>
+            </Border>
+            <Border  CornerRadius="5" BorderThickness="2" BorderBrush="Black" 
+                        Grid.Row="5" Grid.Column="2"  Height="68" Width="68" HorizontalAlignment="Left" Margin="7.8,13.8,0,13.4">
+                <Border.Background>
+                    <SolidColorBrush Color="#FF388B83" Opacity="0.4"/>
+                </Border.Background>
+                <Image x:Name="Image10_img"/>
+            </Border>
+            <Border  CornerRadius="0,0,5,5" BorderThickness="2,0,2,2" BorderBrush="Black" 
+                        Grid.Row="5" Grid.Column="2"  Height="68" Width="69" HorizontalAlignment="Right" Margin="0,13.8,128.6,13.4" Grid.ColumnSpan="2">
+                <Border.Background>
+                    <SolidColorBrush Color="#FF388B83" Opacity="0.4"/>
+                </Border.Background>
+                <Image x:Name="Image11_img"/>
+            </Border>
+            <Border  CornerRadius="0" BorderThickness="2,0,2,0" BorderBrush="Black" 
+                        Grid.Row="4" Grid.Column="2"  Height="90" Width="69" HorizontalAlignment="Right" Grid.ColumnSpan="2" Margin="0,3,128.6,2.2" >
+                <Border.Background>
+                    <SolidColorBrush Color="#FF388B83" Opacity="0.4"/>
+                </Border.Background>
+                <Image x:Name="Image12_img" Margin="0.4,0,-1.8,-0.4"/>
+            </Border>
+            <Border  CornerRadius="50,50,0,0" BorderThickness="2,2,2,0" BorderBrush="Black" 
+                        Grid.Row="3" Grid.Column="2"  Height="68" Width="69" HorizontalAlignment="Left" Margin="104.8,14,0,14" Grid.ColumnSpan="2">
+                <Border.Background>
+                    <SolidColorBrush Color="#FF388B83" Opacity="0.4"/>
+                </Border.Background>
+                <Image x:Name="Image13_img" />
+            </Border>
+
+            <!--Čas reálný-->
+            <Label Grid.Column="2" Grid.Row="0" Content="12:23:24"
+                   HorizontalAlignment="Center" VerticalAlignment="Bottom"
+                   FontSize="16"   Foreground="White"
+                   x:Name="Time_lbl" FontWeight="Bold" Margin="39.8,0,37.4,0" Height="27"/>
+            <!--Informační label-->
+            <Label x:Name="InfoWinHuman_lbl" FontSize="20" Grid.Column="3"  Grid.Row="3" Content="" 
+                   HorizontalContentAlignment="Center" Grid.ColumnSpan="2" Margin="85.6,68,40.8,83.2" Grid.RowSpan="2" Foreground="#FF0FFF00"/>
+            <!--Nová hra tlačítko-->
+            <StackPanel Grid.Column="2" Grid.Row="1">
+                <Button  x:Name="NewGame_btn" Content="Vyhledej nepřítele" Height="40" Click="NewGame_btn_Click" Margin="2" />
+                <Button  x:Name="Attack_btn"  Content="Útok" Height="40" Click="Attack_btn_Click"  Margin="2" />
+
+            </StackPanel>
+            <!--Ukončení aplikace-->
+            <Button Grid.Column="5" Background="#FFA2C5C7" x:Name="exit_btn" Click="exit_btn_Click" >
+                <Image Source="Images/Exit.png"/>
+            </Button>
+            <!--Level hráče a computeru-->
+            <Label Grid.Column="1" Grid.Row="0" HorizontalAlignment="Left" Content="Coiny:" FontSize="16" Foreground="White"/>
+            <Label Grid.Column="0" Grid.Row="0" Content="Level    :  " FontSize="16" HorizontalAlignment="Left" Foreground="White"/>
+            <Label x:Name="LevelHuman_lbl"  Grid.Column="0" FontWeight="Bold" Grid.Row="0" HorizontalAlignment="Center" Content="1" FontSize="16" Foreground="#FF3AFFD8" Margin="66,0,44,0" Width="42"/>
+            <Label x:Name="LevelComputerLabel_lbl" Grid.Column="2" Grid.Row="0" Content="Level Enemy :  " FontSize="16" HorizontalAlignment="Left" Foreground="White" Grid.ColumnSpan="2" Margin="150.8,0,0,0" Width="110"/>
+            <Label x:Name="LevelComputer_lbl"  Grid.Column="3" FontWeight="Bold" Grid.Row="0" HorizontalAlignment="Center" Content="1" FontSize="16" Foreground="#FF3AFFD8" Margin="114.6,0,128.8,0" Grid.ColumnSpan="2" Width="59"/>
+            <Label Foreground="Gold" x:Name="Coins_lbl" Grid.Column="1" Grid.Row="0" Content="0" FontSize="15"  HorizontalAlignment="Center" FontWeight="Bold" Margin="58,0,10.2,0" Width="83"/>
+            <!--Obchod-->
+
+            <!--Životy human,computer progressbar-->
+            <ProgressBar  BorderThickness="1" BorderBrush="Black" Grid.Column="0" Grid.Row="2"  Grid.ColumnSpan="2" Margin="5,5.4,76,5" Value="1000" x:Name="LifeHuman_progress" Maximum="1000" />
+            <ProgressBar BorderThickness="1" BorderBrush="Black"  Grid.Column="3" Grid.Row="2" Grid.ColumnSpan="2" Margin="76,5.4,4.8,5" Value="1000" x:Name="LifeComputer_progress" Maximum="1000" />
+
+            <!--Staty síla, obratnost, blabla-->
+            <StackPanel Margin="5,0,0,29.6" Grid.Column="0" Grid.Row="1">
+                <StackPanel.Background>
+                    <SolidColorBrush Color="#FF00DFFF" Opacity="0.2"/>
+                </StackPanel.Background>
+                <Label Content="Síla             :    " Height="30" FontSize="12" FontWeight="Bold" Foreground="White"/>
+                <Label x:Name="Obratnost_lbl"   Content="Experience  :       " Height="30" FontSize="12" FontWeight="Bold" Foreground="White"/>
+            </StackPanel>
+            <StackPanel HorizontalAlignment="Left" Grid.Column="1" Grid.Row="1" Width="90" Margin="0,0,0,29.6" >
+                <StackPanel.Background>
+                    <SolidColorBrush Color="#FF00DFFF" Opacity="0.2"/>
+                </StackPanel.Background>
+                <Label x:Name="StrenghtHuman_lbl" Content="50" Height="30" FontSize="12" FontWeight="Bold" Margin="0,0,-0.4,0" Foreground="#FFFFE500"/>
+                <Label x:Name="Experience_lbl" Content="0" Height="30" FontSize="12" FontWeight="Bold" Foreground="#FFFFE500"/>
+            </StackPanel>
+            <StackPanel HorizontalAlignment="Left" Grid.Column="4" Grid.Row="1" Width="56" Margin="0.4,0,0,30" Grid.RowSpan="2" >
+
+                <Label x:Name="StrenghtComputer_lbl" Content="50" Foreground="Gold" Height="30" FontSize="12" FontWeight="Bold"/>
+            </StackPanel>
+            <StackPanel  Margin="0,0,5.2,0"  HorizontalAlignment="Right"  VerticalAlignment="Bottom"  Grid.Column="1" Grid.Row="2" Width="50" >
+
+
+                <Label x:Name="LifeHuman_lbl" Content="1000" HorizontalAlignment="Left" Foreground="Gold" Height="30" FontSize="12" 
+                       FontWeight="Bold" Margin="6,0,0,0"
+                       VerticalAlignment="Center"                       
+                       VerticalContentAlignment="Center"/>
+            </StackPanel>
+            <Button   Grid.Column="4"    
+                VerticalAlignment="Top"
+                     HorizontalAlignment="right" Width="54"
+                         x:Name="UlozitData_btn" Content="Uložit" 
+                         Height="30" FontSize="12" FontWeight="Bold" Margin="0,8,9.8,0"
+                       />
+
+            <StackPanel Margin="0,0,91.6,0" HorizontalAlignment="Right" VerticalAlignment="Bottom" Grid.Column="3" Grid.Row="2" Width="50" Height="28" >
+
+
+                <Label x:Name="LifeComuter_lbl" Content="1000"  HorizontalAlignment="Center" 
+                       Height="30" FontSize="12" FontWeight="Bold"  Foreground="Gold" 
+                       />
+
+            </StackPanel>
+            <!--Zde bude další kód-->
+            <WrapPanel>
+
+            </WrapPanel>
+            <StackPanel  Margin="5,0,0,0"  Grid.Column="3" Grid.Row="1">
+
+                <Label x:Name="StrenghtComputerLabel_lbl" Foreground="White" Content="Síla             : " Height="30" FontSize="12" FontWeight="Bold"/>
+                <Button x:Name="Bonus_btn" Content="Vylepšit obranu" Height="30" FontSize="12" 
+                        FontWeight="Bold"  Width="120"/>
+                <Button x:Name="BuyStrenght_btn" Content="Koupit Sílu " Height="30" FontSize="12" FontWeight="Bold" Click="BuyStrenght_btn_Click" Margin="13,0,13.4,0" MouseRightButtonDown="BuyStrenght_btn_MouseRightButtonDown"/>
+            </StackPanel>
+            <!--Obrázek hráče-->
+
+            <Grid Grid.Column="0" Grid.Row="5" Grid.ColumnSpan="2" >
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                </Grid.ColumnDefinitions>
+                <Border CornerRadius="5" BorderThickness="2" BorderBrush="Black" 
+                        Grid.Row="0" Grid.Column="0"   Height="68" Width="68">
+                    <Border.Background>
+                        <SolidColorBrush Color="#FF388B83" Opacity="0.4"/>
+                    </Border.Background>
+                    <Image x:Name="Image3_img" MouseLeftButtonDown="Image3_img_MouseLeftButtonDown"/>
+                </Border>
+                <Border CornerRadius="5" BorderThickness="2" BorderBrush="Black" 
+                        Grid.Row="0" Grid.Column="2"  Height="68" Width="68" Margin="10.6,13,20.2,12.2">
+                    <Border.Background>
+                        <SolidColorBrush Color="#FF388B83" Opacity="0.4"/>
+                    </Border.Background>
+                    <Image x:Name="Image5_img"/>
+                </Border>
+                <Border CornerRadius="5" BorderThickness="2" BorderBrush="Black" 
+                    Grid.Row="0" Grid.Column="1"  Height="68" Width="68">
+                    <Border.Background>
+                        <SolidColorBrush Color="#FF388B83" Opacity="0.4"/>
+                    </Border.Background>
+                    <Image x:Name="Image4_img" MouseLeftButtonDown="Image4_img_MouseLeftButtonDown"/>
+                </Border>
+
+            </Grid>
+            <Image x:Name="ImageZdroj_img" Height="100" Width="80" Grid.Row="3" Grid.RowSpan="2" Source="Images/SoldierHuman.png" Grid.ColumnSpan="2" Margin="112,80,111.2,11.2"/>
+
+
+            <!--Obrázek počítače-->
+            <Image x:Name="Image_img" Grid.Column="4" Grid.Row="3" Margin="0,93,69.8,0" Source="Images/Soldier.png" Stretch="Fill" HorizontalAlignment="Right" Width="68" Height="75" VerticalAlignment="Top" Grid.RowSpan="2"/>
+            <!--Tlačítka boj(útok hned), nabít a čekat kolo(více síly v dalším kole), dobít staminu(čekt kolo)-->
+            <Button   Grid.Column="4"    
+                VerticalAlignment="Top"
+                HorizontalAlignment="right" Width="54"
+                x:Name="NewGameAndReset_btn" Content="Nová hra" 
+                Height="30" FontSize="12" FontWeight="Bold" Margin="0,8,69.8,0" 
+                       />
+            <Border  CornerRadius="5" BorderThickness="2" BorderBrush="Black" 
+                Grid.Row="3" Grid.Column="0"  Height="68" Width="68" Margin="16,13,66,13">
+                <Border.Background>
+                    <SolidColorBrush Color="#FF388B83" Opacity="0.4"/>
+                </Border.Background>
+                <Image x:Name="Image1_img" MouseLeftButtonDown="Image1_img_MouseLeftButtonDown"/>
+            </Border>
+
+            <Label x:Name="PredmetKZiskani_lbl" FontSize="13" Content="" Grid.Column="2" HorizontalAlignment="Left" 
+                   Margin="130.8,0,0,0" Grid.Row="3" VerticalAlignment="Top" 
+                   Height="29" Width="179" Grid.ColumnSpan="3"
+                   VerticalContentAlignment="Center">
+
+            </Label>
+
+            <Border  CornerRadius="5" BorderThickness="2" BorderBrush="Black" 
+                Grid.Row="4" Grid.Column="1"  Height="68" Width="68" Margin="62,13,19.2,12.2">
+                <Border.Background>
+                    <SolidColorBrush Color="#FF388B83" Opacity="0.4"/>
+                </Border.Background>
+                <Image x:Name="Image6_img"/>
+            </Border>
+            <Label x:Name="InfoHUman_lbl" Content="Jméno" FontSize="17" HorizontalContentAlignment="Center" Foreground="Yellow"  HorizontalAlignment="Left" Margin="90,53,0,0" Grid.Row="3" VerticalAlignment="Top" Grid.ColumnSpan="2" Width="118" Height="33"/>
+            <Label x:Name="InfoComputer_lbl"  FontSize="20" Foreground="Red" Content="Label" Margin="86.6,53,28.8,0" Grid.Row="3" VerticalAlignment="Top" Width="227" Grid.Column="3" Grid.ColumnSpan="3"  HorizontalContentAlignment="Center" />
+            <CheckBox x:Name="ProgressFight_check" Content="Průběh boje" Foreground="White" Grid.Column="2" HorizontalAlignment="Right" Margin="0,0,61.4,0" VerticalAlignment="Top" HorizontalContentAlignment="Center" />
+            <Image x:Name="Treaseure1_img" Grid.Column="3" HorizontalAlignment="Left" Height="48" Margin="36.6,14.8,0,0" Grid.Row="5" VerticalAlignment="Top" Width="63" MouseLeftButtonDown="Treaseure1_img_MouseLeftButtonDown"/>
+            <Image x:Name="Treaseure2_img"  Grid.Column="3" HorizontalAlignment="Left" Height="48" Margin="128.6,14.8,0,0" Grid.Row="5" VerticalAlignment="Top" Width="63" Grid.ColumnSpan="2" MouseLeftButtonDown="Treaseure2_img_MouseLeftButtonDown"/>
+            <Image x:Name="Treaseure3_img" Grid.Column="4" HorizontalAlignment="Left" Height="48" Margin="65.4,14.8,0,0" Grid.Row="5" VerticalAlignment="Top" Width="63" MouseLeftButtonDown="Treaseure3_img_MouseLeftButtonDown"/>
+            <TextBox Background="LawnGreen" x:Name="NameInsert_txt" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" TextWrapping="Wrap" Text="Zadej zde jméno" Grid.ColumnSpan="2" Margin="90,2,93.2,71" Grid.Row="3" MouseEnter="NameInsert_txt_MouseEnter" MouseLeave="NameInsert_txt_MouseLeave"  />
+            <Button x:Name="InsertName_btn" Content="Vložit" HorizontalAlignment="Left" Margin="109,30,0,0" Grid.Row="3" VerticalAlignment="Top" Width="83" Height="18" Grid.ColumnSpan="2" Click="Button_Click"/>
+            <Image x:Name="Treaseure4_img" Grid.Column="3" HorizontalAlignment="Left" Height="75" Margin="128.6,7,0,0" Grid.Row="4" VerticalAlignment="Top" Width="90" Grid.ColumnSpan="2" MouseLeftButtonDown="Treaseure4_img_MouseLeftButtonDown"/>
+            <Label x:Name="InfoWinComputer_lbl" FontSize="20" Grid.Row="3" Content=""  
+                   HorizontalContentAlignment="Center" Grid.ColumnSpan="2" Margin="65,94,62.2,57.2" RenderTransformOrigin="0.5,0.5" Grid.RowSpan="2" Foreground="#FFFFEE00">
+                <Label.RenderTransform>
+                    <TransformGroup>
+                        <ScaleTransform/>
+                        <SkewTransform/>
+                        <RotateTransform Angle="-29.699"/>
+                        <TranslateTransform/>
+                    </TransformGroup>
+                </Label.RenderTransform>
+            </Label>
+
+
+
+
+
+
+
+        </Grid>
+    </Border>
+
+</Window>
